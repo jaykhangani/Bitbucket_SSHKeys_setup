@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Bitbucket sshkeys setup by jaykhangani</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Bitbucket sshkeys setup</h1>
+        <h2>Gives basic ,easy to understand setup for ssh keys for bitbucket</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/jaykhangani/Bitbucket_SSHKeys_setup/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/jaykhangani/Bitbucket_SSHKeys_setup/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/jaykhangani/Bitbucket_SSHKeys_setup" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="setting-up-bitbuckets-ssh-key-for-beginners" class="anchor" href="#setting-up-bitbuckets-ssh-key-for-beginners"><span class="octicon octicon-link"></span></a>Setting Up Bitbucket's SSH Key for Beginners</h1>
+
+<h2>
+<a name="step-1ensuring-u-have-a-ssh-client" class="anchor" href="#step-1ensuring-u-have-a-ssh-client"><span class="octicon octicon-link"></span></a>Step 1:Ensuring U have a SSH Client</h2>
+
+<ol>
+<li>Open a Terminal and write : <code>ssh -v</code> and press Enter</li>
+<li>if something like below comes then you have ssh installed :<br>
+</li>
+</ol><p><code>usage: ssh [-1246AaCfgKkMNnqsTtVvXxYy] [-b bind_address] [-c cipher_spec]  
+           [-D [bind_address:]port] [-e escape_char] [-F configfile]  
+           [-I pkcs11] [-i identity_file]  
+           [-L [bind_address:]port:host:hostport]  
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]  
+           [-R [bind_address:]port:host:hostport] [-S ctl_path]  
+           [-W host:port] [-w local_tun[:remote_tun]]  
+           [user@]hostname [command]</code>  </p>
+
+<hr><h2>
+<a name="step-2setting-up-default-identity" class="anchor" href="#step-2setting-up-default-identity"><span class="octicon octicon-link"></span></a>Step 2:Setting up Default Identity</h2>
+
+<ol>
+<li>Open up a Terminal and write : <code>ssh-keygen</code> and press Enter</li>
+<li>It will ask you for a file name ,it should be kept empty and you should press Enter</li>
+<li>It will ask you for some phrase,you can write it or keep it blank but you should remember it </li>
+<li>It will create a Fingerprint and RSA image and will show you something like this<br>
+</li>
+</ol><p><code>myhost:~ manthony$ ssh-keygen    
+Generating public/private rsa key pair.  
+Enter file in which to save the key (/Users/manthony/.ssh/id_rsa):   
+Created directory '/Users/manthony/.ssh'.  
+Enter passphrase (empty for no passphrase):   
+Enter same passphrase again:   
+Your identification has been saved in /Users/manthony/.ssh/id_rsa.  
+Your public key has been saved in /Users/manthony/.ssh/id_rsa.pub.  
+The key fingerprint is:  
+4c:80:61:2c:00:3f:9d:dc:08:41:2e:c0:cf:b9:17:69 manthony@myhost.local  
+The key's randomart image is:  
++--[ RSA 2048]----+  
+|*o+ooo.          |  
+|.+.=o+ .         | 
+|. *.* o .        | 
+| . = E o         |  
+|    o . S        |  
+|   . .           |  
+|    .            |  
+|                 |  
+|                 |  
++----------------</code><br>
+5. This will also create a hidden directory in home folder with name :<code>.ssh</code>    </p>
+
+<h2>
+<a name="step-3-install-the-key-on-your-bitbucket-account" class="anchor" href="#step-3-install-the-key-on-your-bitbucket-account"><span class="octicon octicon-link"></span></a>Step 3 :Install the key on your Bitbucket Account</h2>
+
+<ol>
+<li>Open a Terminal and write :<code>cat ~/.ssh/id_rsa.pub</code>
+</li>
+<li>It show the RSA key , copy it .</li>
+<li>Now go to you Bitbucket Account.</li>
+<li>Click on the profile icon on right corner of Bitbucket.</li>
+<li>Click on Manage Account Tab.</li>
+<li>Go to  on SSH Keys in Security Tab.</li>
+<li>Click on Add Key.</li>
+<li>Write a unique name for label of key eg. Linux-PC-Model-name-date</li>
+<li>Paste the RSA key earlier copied.
+10.Click save and You are Done!!!!</li>
+</ol><p>Wasn't it Damn easy??!!</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
