@@ -58,6 +58,6 @@ The key's randomart image is:
 Wasn't it Damn easy??!!  
 
 If you have an issues them please report it on the issue tracker.  
-[https://github.com/jaykhangani/Bitbucket_SSHKeys_setup/issues](https://github.com/jaykhangani/Bitbucket_SSHKeys_setup/issue 	
+[https://github.com/jaykhangani/Bitbucket_SSHKeys_setup/issues](https://github.com/jaykhangani/Bitbucket_SSHKeys_setup/issue)	
 
 
